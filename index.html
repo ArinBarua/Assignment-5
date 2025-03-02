@@ -6,13 +6,48 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
 </head>
-<body>
-    <section>
-        <div>
-            <h1>hello</h1>
+<body class="poppins-regular bg-slate-200">
+    <header class="mx-24 my-4">
+        <nav class="p-4 bg-white flex gap-5 rounded-3xl">
+            <div class="w-1/2 flex gap-2 items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="font-normal text-4xl">Dev<span class="font-extrabold">Board</span></h1>
+            </div>
+            <div class="w-1/2 flex align-middle justify-end gap-5">
+                <div class="flex justify-center align-middle bg-slate-200 gap-4 rounded-full px-5 py-4">
+                    <div class="w-full h-full">
+                        <img class="w-full h-full" src="./assets/checkbox.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-4xl font-bold">23</h1>
+                    </div>
+                </div>
+                <div class="bg-slate-200 align-middle justify-center p-2 rounded-full">
+                    <img class="w-14" src="./assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="bg-white">
+            <div></div>
         </div>
-    </section>
+        <div></div>
+    </main>
     
 </body>
 </html>
