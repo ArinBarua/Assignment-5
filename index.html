@@ -33,7 +33,7 @@
                         <img class="pt-1" src="./assets/checkbox.png" alt="">
                     </div>
                     <div class="w-5 h-5 inline justify-center align-middle">
-                        <h1 class="text-2xl font-bold">23</h1>
+                        <h1 id="score" class="text-2xl font-bold">23</h1>
                     </div>
                 </div>
                 <div class="bg-slate-200 align-middle justify-centers h-full p-2 rounded-full">
@@ -53,7 +53,7 @@
                         </div>
                         <div>
                             <p class="text-sm">Task Assigned</p>
-                            <h1 class="text-lg font-bold">05</h1>
+                            <h1 id="taskCount" class="text-lg font-bold">05</h1>
                         </div>
                     </div>
                     <div id="blog" class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 ... flex gap-3 p-3 rounded-2xl grow h-20 align-middle cursor-pointer">
@@ -83,8 +83,28 @@
                         <div>
                             <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
                         </div>
+                        <div id="card-1" class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Try cleaning the button, checking for software updates, or repair service.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="completeBtn" onclick="taskBtn('task 1')" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer disabled:opacity-10">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">CloudSync</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Add Dark Mode</h2>
+                        </div>
                         <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-xs">Switch between dark and light mode with CSS and JavaScript.</p>
                         </div>
                         <div class="flex gap-4 pt-5">
                             <div>
@@ -98,13 +118,13 @@
                     </div>
                     <div class="bg-slate-200 rounded-lg p-4">
                         <div class="bg-white rounded-2xl px-3 py-1">
-                            <p class="text-xs text-start">ShopEase</p>
+                            <p class="text-xs text-start">SwiftPay</p>
                         </div>
                         <div>
-                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                            <h2 class="text-lg font-bold py-2">Optimize  Home page </h2>
                         </div>
                         <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-xs">To optimize your homepage, you can improve its user experience, speed, and SEO.</p>
                         </div>
                         <div class="flex gap-4 pt-5">
                             <div>
@@ -118,13 +138,13 @@
                     </div>
                     <div class="bg-slate-200 rounded-lg p-4">
                         <div class="bg-white rounded-2xl px-3 py-1">
-                            <p class="text-xs text-start">ShopEase</p>
+                            <p class="text-xs text-start">Meta</p>
                         </div>
                         <div>
-                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                            <h2 class="text-lg font-bold py-2">Add new emoji 🤲</h2>
                         </div>
                         <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-xs">Add new emoji using Apple Intelligence, Slack, Microsoft Teams, or Unicode.</p>
                         </div>
                         <div class="flex gap-4 pt-5">
                             <div>
@@ -138,13 +158,13 @@
                     </div>
                     <div class="bg-slate-200 rounded-lg p-4">
                         <div class="bg-white rounded-2xl px-3 py-1">
-                            <p class="text-xs text-start">ShopEase</p>
+                            <p class="text-xs text-start">Google LLC</p>
                         </div>
                         <div>
-                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                            <h2 class="text-lg font-bold py-2">Integrate OpenAI API </h2>
                         </div>
                         <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-xs">Use your preferred programming language or tool to make an HTTP POST.</p>
                         </div>
                         <div class="flex gap-4 pt-5">
                             <div>
@@ -158,33 +178,13 @@
                     </div>
                     <div class="bg-slate-200 rounded-lg p-4">
                         <div class="bg-white rounded-2xl px-3 py-1">
-                            <p class="text-xs text-start">ShopEase</p>
+                            <p class="text-xs text-start">Glassdoar</p>
                         </div>
                         <div>
-                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                            <h2 class="text-lg font-bold py-2">Improve Job searching </h2>
                         </div>
                         <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="flex gap-4 pt-5">
-                            <div>
-                                <p class="text-xs">Deadline</p>
-                                <h3 class="text-sm font-semibold">21 March 2025</h3>
-                            </div>
-                            <div>
-                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-200 rounded-lg p-4">
-                        <div class="bg-white rounded-2xl px-3 py-1">
-                            <p class="text-xs text-start">ShopEase</p>
-                        </div>
-                        <div>
-                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
-                        </div>
-                        <div class="bg-white rounded-xl px-3 py-2">
-                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="text-xs">Search job by networking, using technology, and optimizing resume.</p>
                         </div>
                         <div class="flex gap-4 pt-5">
                             <div>
@@ -209,13 +209,13 @@
                         </div>
                     </div>
                     <div class="text-center mb-2">
-                        <button class="bg-blue-700 text-white px-5 py-2 text-sm rounded-2xl">Clear History</button>
+                        <button onclick="clearMessage()" class="bg-blue-700 text-white px-5 py-2 text-sm rounded-2xl">Clear History</button>
                     </div>
                     
                 </div>
                 <div class="p-5">
-                    <div class="bg-slate-200 p-4 rounded-2xl">
-                        <p class="text-sm">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                    <div id="messageBox" class="bg-slate-200 p-4 rounded-2xl message">
+                        <p class="text-sm">You have Completed The Task Add Dark Mode at 12:48:15 PM</p>
                     </div>
                 </div>
                 

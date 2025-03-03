@@ -42,6 +42,42 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="mx-24 space-y-4">
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
+                <div class="collapse-content text-sm">1. Using getElementById
+                2. Using getElementsByClassName
+                3. Using getElementsByTagName
+                4. Using querySelector
+                5. Using querySelectorAll</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
+                <div class="collapse-content text-sm">InnerHTML: Using innerHTML allows you to see exactly what's in the HTML markup contained within a string, including elements like spacing, line breaks and formatting. 
+                InnerText: This approximates the “rendered” text content of a node and is aware of styling and CSS. It's most effective when you only need to see what's in the element without the formatting.
+                TextContent: This retrieves and sets the content of the tag as plain text. It's most effective when you want to see what's in an element, plus styling.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">What is event delegation in the DOM?</div>
+                <div class="collapse-content text-sm">Event delegation is a technique in JavaScript where a single event listener is attached to a parent element instead of attaching event listeners to multiple child elements.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
+                <div class="collapse-content text-sm">To handle cases where one event has more than one handler, event bubbling concept can be implemented.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript?</div>
+                <div class="collapse-content text-sm">Using the document. createElement() method, using the Element. removeAttribute() method using para.appendChild(node) you can create, add, and remove elements using JavaScript.</div>
+              </div>
+        </section>
+        
+    </main>
     
 </body>
 </html>
