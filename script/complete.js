@@ -14,3 +14,7 @@ function changeTheme() {
     document.body.style.backgroundColor = bgColor;
     // console.log("thik ache");
 }
+
+document.getElementById("blog").addEventListener("click", function() {
+    window.location.href = "./blog.html";
+});
