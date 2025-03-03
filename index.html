@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +28,16 @@
                 <h1 class="font-normal text-4xl">Dev<span class="font-extrabold">Board</span></h1>
             </div>
             <div class="w-1/2 flex align-middle justify-end gap-5">
-                <div class="flex justify-center align-middle bg-slate-200 gap-4 rounded-full px-5 py-4">
-                    <div class="w-full h-full">
-                        <img class="w-full h-full" src="./assets/checkbox.png" alt="">
+                <div class="w-32 h-full flex align-middle justify-center bg-slate-200 gap-5 rounded-full p-3">
+                    <div class="w-6 h-6 inline text-center justify-center align-middle">
+                        <img class="pt-1" src="./assets/checkbox.png" alt="">
                     </div>
-                    <div>
-                        <h1 class="text-4xl font-bold">23</h1>
+                    <div class="w-5 h-5 inline justify-center align-middle">
+                        <h1 class="text-2xl font-bold">23</h1>
                     </div>
                 </div>
-                <div class="bg-slate-200 align-middle justify-center p-2 rounded-full">
-                    <img class="w-14" src="./assets/theme-btn.png" alt="">
+                <div class="bg-slate-200 align-middle justify-centers h-full p-2 rounded-full">
+                    <img id="theme-btn" onclick="changeTheme()" class="cursor-pointer" src="./assets/theme-btn.png" alt="">
                 </div>
             </div>
         </nav>
@@ -44,62 +45,162 @@
 
     <main class="mx-24 py-4">
         <div class="flex gap-4">
-            <div class="bg-white rounded-2xl">
+            <div class="bg-white rounded-2xl w-full">
                 <div class="flex p-4 gap-5 border-b-3 border-dashed border-blue-100">
-                    <div class="bg-slate-200 flex gap-5 rounded-2xl p-5 w-52 h-28">
-                        <div class="w-16 h-16 bg-white rounded-full p-3">
-                            <img class="w-10 h-10" src="./assets/checkbox.png" alt="">
+                    <div class="bg-slate-200 flex gap-4 rounded-2xl p-4 w-52 h-20">
+                        <div class="w-12 h-12 bg-white rounded-full p-3">
+                            <img src="./assets/checkbox.png" alt="">
                         </div>
                         <div>
-                            <p class="text-lg">Task Assigned</p>
-                            <h1 class="text-2xl font-bold">05</h1>
+                            <p class="text-sm">Task Assigned</p>
+                            <h1 class="text-lg font-bold">05</h1>
                         </div>
                     </div>
-                    <div class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 ... flex gap-3 rounded-2xl p-5 grow h-28 align-middle">
-                        <div class="w-24 align-middle">
+                    <div class="bg-gradient-to-r from-blue-700 via-blue-500 to-blue-300 ... flex gap-3 p-3 rounded-2xl grow h-20 align-middle">
+                        <div class="w-20 h-full p-1 align-middle">
                             <img src="./assets/board.png" alt="">
                         </div>
-                        <div class="align-middle">
-                            <p class="text-lg text-white">Discover Something,<br>New Today!</p>
+                        <div class="w-full h-full p-2 inline align-middle">
+                            <p class="text-sm text-white">Discover Something,<br>New Today!</p>
                         </div>
                     </div>
-                    <div class="bg-slate-200 flex gap-5 rounded-2xl p-5 w-52 h-28">
-                        <div class="w-16 h-16 bg-white rounded-full p-3">
-                            <img class="w-10 h-10" src="./assets/calender.png" alt="">
+                    <div class="bg-slate-200 flex gap-4 rounded-2xl p-4 w-52 h-20">
+                        <div class="w-12 h-12 bg-white rounded-full p-3">
+                            <img src="./assets/calender.png" alt="">
                         </div>
                         <div>
-                            <p class="text-lg">Wed ,</p>
-                            <h1 class="text-2xl font-bold">Jul 28 2025</h1>
+                            <p class="text-sm">Wed ,</p>
+                            <h1 class="text-lg font-bold">Jul 28 2025</h1>
                         </div>
                     </div>
                 </div>
                 
-                <div class="p-5 bg-white">
-                    <div class="bg-slate-200 rounded-2xl p-4">
+                <div class="p-5 bg-white grid grid-cols-3 gap-4 rounded-full">
+                    <div class="bg-slate-200 rounded-lg p-4">
                         <div class="bg-white rounded-2xl px-3 py-1">
                             <p class="text-xs text-start">ShopEase</p>
                         </div>
                         <div>
-                            <h2 class="text-xl py-2">Fix Mobile Button Issue</h2>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
                         </div>
-                        <div class="bg-white rounded-2xl px-3 py-1">
+                        <div class="bg-white rounded-xl px-3 py-2">
                             <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
-                        <div class="flex gap-4 pt-2">
+                        <div class="flex gap-4 pt-5">
                             <div>
                                 <p class="text-xs">Deadline</p>
                                 <h3 class="text-sm font-semibold">21 March 2025</h3>
                             </div>
                             <div>
-                                <button class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg">Completed</button>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">ShopEase</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">ShopEase</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">ShopEase</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">ShopEase</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 rounded-lg p-4">
+                        <div class="bg-white rounded-2xl px-3 py-1">
+                            <p class="text-xs text-start">ShopEase</p>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold py-2">Fix Mobile Button Issue</h2>
+                        </div>
+                        <div class="bg-white rounded-xl px-3 py-2">
+                            <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="flex gap-4 pt-5">
+                            <div>
+                                <p class="text-xs">Deadline</p>
+                                <h3 class="text-sm font-semibold">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="Complete-btn" class="bg-blue-700 text-white text-xs py-2 px-3 rounded-lg cursor-pointer">Completed</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-2xl w-64 ">
+            <div class="bg-white rounded-2xl w-1/3 ">
                 <div class="pt-4 border-b-3 border-dashed border-blue-100">
-                    <div class="flex gap-4 justify-center py-5">
+                    <div class="flex gap-3 justify-center py-3">
                         <div>
                             <img src="./assets/activity.png" alt="">
                         </div>
@@ -108,7 +209,7 @@
                         </div>
                     </div>
                     <div class="text-center mb-2">
-                        <button class="bg-blue-700 text-white px-5 py-2 rounded-2xl">Clear History</button>
+                        <button class="bg-blue-700 text-white px-5 py-2 text-sm rounded-2xl">Clear History</button>
                     </div>
                     
                 </div>
@@ -123,6 +224,7 @@
             
         
     </main>
-    
+    <script src="./script/complete.js"></script>
+
 </body>
 </html>
